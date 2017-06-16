@@ -10,13 +10,9 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
-@NamedQueries({
-        @NamedQuery(name = "findAllBooks", query = "SELECT b FROM Book b"),
-        @NamedQuery(name = "findBookH2G2", query = "SELECT b FROM Book b WHERE b.title ='H2G2'")
-})
 public class Book {
     @Id
-    @GeneratedValue
+    @GeneratedValue()
     private Long id;
     private Float price;
     @NotNull
@@ -35,8 +31,9 @@ public class Book {
         this.description = description;
         this.isbn = isbn;
         this.nbOfPage = nbOfPage;
-        this.illustrations = illustrations;
+        this.illustrations = illustrations;/**/
     }
+    public Book(){}
 
     public Long getId() {
         return id;
@@ -95,18 +92,4 @@ public class Book {
         this.illustrations = illustrations;
     }
 
-    @Override
-    public String toString() {
-        final StringBuilder sb = new StringBuilder();
-        sb.append("Book");
-        sb.append("{id=").append(id);
-        sb.append(", title='").append(title).append('\'');
-        sb.append(", price=").append(price);
-        sb.append(", description='").append(description).append('\'');
-        sb.append(", isbn='").append(isbn).append('\'');
-        sb.append(", nbOfPage=").append(nbOfPage);
-        sb.append(", illustrations=").append(illustrations);
-        sb.append('}');
-        return sb.toString();
-    }
 }

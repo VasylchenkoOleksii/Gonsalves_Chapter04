@@ -22,5 +22,6 @@ public class App {
             // Закрывает EntityManager и EntityManagerFactory
             em.close();
             emf.close();
+            System.out.println("hello");
         }
 }

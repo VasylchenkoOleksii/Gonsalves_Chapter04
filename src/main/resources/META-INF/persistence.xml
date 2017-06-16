@@ -7,9 +7,9 @@
     <properties>
         <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
         <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.driver.OracleDriver" />
-        <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@typhoon:1521:work"/>
-        <property name="javax.persistence.jdbc.user" value="creator"/>
-        <property name="javax.persistence.jdbc.password" value="c67"/>
+        <property name="javax.persistence.jdbc.url" value=""/>
+        <property name="javax.persistence.jdbc.user" value=""/>
+        <property name="javax.persistence.jdbc.password" value=""/>
         <property name="hibernate.connection.pool_size" value="1"/>
         <property name="hibernate.dialect" value="org.hibernate.dialect.OracleDialect"/>
         <property name="show_sql" value="true"/>
